@@ -1,0 +1,71 @@
+﻿<!-- Water Damage Contact Page Template -->
+<section class="hero">
+  <div class="container hero-content">
+    <span class="alert-tag">IMMEDIATE 24/7 EMERGENCY DISPATCH</span>
+    <h1>{{content.hero.headline}}</h1>
+    <p>{{content.hero.subheadline}}</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="grid-2">
+      <!-- Contact Info Card -->
+      <div class="card" style="border-top: 4px solid var(--primary);">
+        <h3 style="font-size: 24px; margin-bottom: 22px;">Emergency Response Center</h3>
+        
+        <div style="margin-bottom: 22px;">
+          <p style="font-size: 13px; text-transform: uppercase; color: var(--primary); font-weight: 800; letter-spacing: 0.5px;">Direct Emergency Line</p>
+          <p style="font-size: 26px; font-weight: 900; color: var(--primary);">
+            <a href="{{phoneLink content.contact_info.phone}}">{{content.contact_info.phone}}</a>
+          </p>
+        </div>
+
+        <div style="margin-bottom: 20px;">
+          <p style="font-size: 13px; text-transform: uppercase; color: var(--text-muted); font-weight: 700;">Email Communications</p>
+          <p style="font-size: 16px; color: var(--text);">{{content.contact_info.email}}</p>
+        </div>
+
+        <div style="margin-bottom: 20px;">
+          <p style="font-size: 13px; text-transform: uppercase; color: var(--text-muted); font-weight: 700;">Disaster Logistics Station</p>
+          <p style="font-size: 16px; color: var(--text);">{{content.contact_info.address}}</p>
+        </div>
+
+        <div>
+          <p style="font-size: 13px; text-transform: uppercase; color: var(--text-muted); font-weight: 700;">Service Readiness</p>
+          <p style="font-size: 16px; color: var(--text);">{{content.contact_info.business_hours}}</p>
+        </div>
+
+        {{#if content.emergency_note}}
+        <div style="margin-top: 24px; padding: 18px; background: #fee2e2; border-radius: 6px; color: #991b1b; font-size: 15px; font-weight: 700;">
+          🚨 {{content.emergency_note}}
+        </div>
+        {{/if}}
+      </div>
+
+      <!-- Emergency Request Form -->
+      <div class="card">
+        <h3 style="font-size: 24px; margin-bottom: 22px;">Request Immediate Dispatch</h3>
+        <form onsubmit="alert('Emergency request received! Our dispatch crew is calling you right now.'); return false;">
+          <div style="margin-bottom: 16px;">
+            <label style="display: block; font-size: 13px; font-weight: 700; margin-bottom: 6px;">Contact Person / Owner</label>
+            <input type="text" required style="width: 100%; padding: 12px; border: 1px solid var(--border); border-radius: 6px; font-size: 14px;" placeholder="Full Name">
+          </div>
+          <div style="margin-bottom: 16px;">
+            <label style="display: block; font-size: 13px; font-weight: 700; margin-bottom: 6px;">Callback Phone (Urgent)</label>
+            <input type="tel" required style="width: 100%; padding: 12px; border: 1px solid var(--border); border-radius: 6px; font-size: 14px;" placeholder="(555) 000-0000">
+          </div>
+          <div style="margin-bottom: 16px;">
+            <label style="display: block; font-size: 13px; font-weight: 700; margin-bottom: 6px;">Property Address / City</label>
+            <input type="text" required style="width: 100%; padding: 12px; border: 1px solid var(--border); border-radius: 6px; font-size: 14px;" placeholder="Street Address, City">
+          </div>
+          <div style="margin-bottom: 20px;">
+            <label style="display: block; font-size: 13px; font-weight: 700; margin-bottom: 6px;">Type of Damage / Flood Extent</label>
+            <textarea rows="4" style="width: 100%; padding: 12px; border: 1px solid var(--border); border-radius: 6px; font-size: 14px;" placeholder="e.g. Burst pipe flooded basement, active ceiling leak, standing water"></textarea>
+          </div>
+          <button type="submit" class="btn btn-emergency" style="width: 100%;">Dispatch Emergency Crew</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

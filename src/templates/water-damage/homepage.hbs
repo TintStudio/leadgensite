@@ -1,0 +1,117 @@
+﻿<!-- Hero Section -->
+<section class="hero">
+  <div class="container hero-content">
+    <span class="alert-tag">EMERGENCY FLOOD &amp; WATER DAMAGE EXTRACTION</span>
+    <h1>{{content.hero.headline}}</h1>
+    <p>{{content.hero.subheadline}}</p>
+    <div class="hero-actions">
+      <a href="{{phoneLink project.phone}}" class="btn btn-emergency">{{content.hero.cta_button_text}} ({{project.phone}})</a>
+      <a href="/contact" class="btn btn-outline">Request On-Site Inspection</a>
+    </div>
+  </div>
+</section>
+
+<!-- Services Overview -->
+<section id="services" class="section">
+  <div class="container">
+    <div class="section-title">
+      <h2>{{content.services_overview.heading}}</h2>
+      <p>{{content.services_overview.subheading}}</p>
+    </div>
+    <div class="grid-3">
+      {{#each content.services_overview.featured_services}}
+      <div class="card" style="border-top: 4px solid var(--primary);">
+        <h3>{{this.title}}</h3>
+        <p>{{this.short_description}}</p>
+        <div style="margin-top: 16px;">
+          <a href="/services/{{this.slug}}" style="color: var(--primary); font-weight: 700; font-size: 13px;">Restoration Procedure &rarr;</a>
+        </div>
+      </div>
+      {{/each}}
+    </div>
+  </div>
+</section>
+
+<!-- About & Story -->
+<section id="about" class="section section-alt">
+  <div class="container">
+    <div class="section-title">
+      <h2>{{content.about.heading}}</h2>
+      <p>{{content.about.story}}</p>
+    </div>
+    <div class="grid-2">
+      {{#each content.about.bullet_points}}
+      <div class="card" style="border-left: 4px solid var(--primary);">
+        <p style="color: var(--secondary); font-weight: 700;">✓ {{this}}</p>
+      </div>
+      {{/each}}
+    </div>
+  </div>
+</section>
+
+<!-- Why Choose Us -->
+<section class="section">
+  <div class="container">
+    <div class="section-title">
+      <h2>{{content.why_choose_us.heading}}</h2>
+    </div>
+    <div class="grid-2">
+      {{#each content.why_choose_us.features}}
+      <div class="card">
+        <h3>{{this.title}}</h3>
+        <p>{{this.description}}</p>
+      </div>
+      {{/each}}
+    </div>
+  </div>
+</section>
+
+<!-- Service Areas -->
+<section id="areas" class="section section-alt">
+  <div class="container">
+    <div class="section-title">
+      <h2>Emergency Disaster Dispatch Territories</h2>
+      <p>Our rapid water extraction and structural drying units are stationed for fast local arrival.</p>
+    </div>
+    <div class="grid-3">
+      {{#each areasList}}
+      <div class="card">
+        <h3>{{this.name}}</h3>
+        <p>Rapid 60-minute emergency mitigation response for property owners in {{this.name}}.</p>
+        <div style="margin-top: 12px;">
+          <a href="/areas/{{this.slug}}" style="color: var(--primary); font-weight: 700; font-size: 13px;">View {{this.name}} Details &rarr;</a>
+        </div>
+      </div>
+      {{/each}}
+    </div>
+  </div>
+</section>
+
+<!-- FAQs -->
+<section class="section">
+  <div class="container">
+    <div class="section-title">
+      <h2>Frequently Asked Disaster Restoration Questions</h2>
+      <p>Critical guidance on insurance claims, mitigation steps, and drying timelines.</p>
+    </div>
+    <div style="max-width: 820px; margin: 0 auto;">
+      {{#each content.faqs}}
+      <div class="faq-item">
+        <h4>{{this.question}}</h4>
+        <p>{{this.answer}}</p>
+      </div>
+      {{/each}}
+    </div>
+  </div>
+</section>
+
+<!-- High Urgency CTA -->
+<section class="cta-banner">
+  <div class="container">
+    <h2>{{content.cta_banner.headline}}</h2>
+    <p>{{content.cta_banner.subheadline}}</p>
+    <a href="{{phoneLink project.phone}}" class="btn btn-outline" style="background: #ffffff; color: var(--primary); font-size: 16px; border: none; font-weight: 800;">
+      {{content.cta_banner.button_text}} ({{project.phone}})
+    </a>
+  </div>
+</section>

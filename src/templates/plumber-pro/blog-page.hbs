@@ -1,0 +1,40 @@
+﻿<!-- Blog Post Template -->
+<article class="section">
+  <div class="container" style="max-width: 800px;">
+    <span class="hero-badge">Plumbing Advice &amp; Tips</span>
+    <h1 style="font-size: 36px; font-weight: 800; color: var(--secondary); margin-bottom: 12px; line-height: 1.3;">{{content.title}}</h1>
+    <div style="font-size: 13px; color: var(--text-muted); margin-bottom: 24px;">
+      <span>Read time: {{content.read_time}}</span> • <span>Published by {{project.business_name}}</span>
+    </div>
+
+    <!-- Excerpt -->
+    <div class="card" style="border-left: 4px solid var(--primary); margin-bottom: 36px; background: var(--surface);">
+      <p style="font-size: 16px; font-style: italic; color: var(--secondary);">{{content.excerpt}}</p>
+    </div>
+
+    <!-- Article Sections -->
+    <div class="article-content" style="font-size: 16px; line-height: 1.8; color: var(--text);">
+      {{#each content.sections}}
+      <div style="margin-bottom: 36px;">
+        <h2 style="font-size: 24px; font-weight: 700; color: var(--secondary); margin-bottom: 14px;">{{this.heading}}</h2>
+        {{#each this.paragraphs}}
+        <p style="margin-bottom: 14px;">{{this}}</p>
+        {{/each}}
+      </div>
+      {{/each}}
+    </div>
+
+    <!-- Conclusion -->
+    <div class="card" style="margin-top: 40px; background: var(--surface);">
+      <h3 style="margin-bottom: 8px;">Final Thoughts</h3>
+      <p>{{content.conclusion}}</p>
+    </div>
+
+    <!-- Emergency Box -->
+    <div class="card" style="margin-top: 32px; border: 2px solid var(--primary); text-align: center; padding: 32px;">
+      <h3 style="font-size: 22px; margin-bottom: 10px;">Need Emergency Plumbing Help?</h3>
+      <p style="margin-bottom: 20px;">Contact our licensed team immediately for 24/7 priority emergency response.</p>
+      <a href="{{phoneLink project.phone}}" class="btn btn-primary">Call {{project.phone}}</a>
+    </div>
+  </div>
+</article>

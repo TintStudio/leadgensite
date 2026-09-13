@@ -1,0 +1,71 @@
+﻿<!-- Contact Page Template -->
+<section class="hero">
+  <div class="container hero-content">
+    <span class="hero-badge">Get in Touch</span>
+    <h1>{{content.hero.headline}}</h1>
+    <p>{{content.hero.subheadline}}</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="grid-2">
+      <!-- Contact Info Card -->
+      <div class="card">
+        <h3 style="font-size: 22px; margin-bottom: 20px;">Contact Information</h3>
+        
+        <div style="margin-bottom: 20px;">
+          <p style="font-size: 13px; text-transform: uppercase; color: var(--text-muted); font-weight: 700;">24/7 Phone</p>
+          <p style="font-size: 20px; font-weight: 800; color: var(--primary);">
+            <a href="{{phoneLink content.contact_info.phone}}">{{content.contact_info.phone}}</a>
+          </p>
+        </div>
+
+        <div style="margin-bottom: 20px;">
+          <p style="font-size: 13px; text-transform: uppercase; color: var(--text-muted); font-weight: 700;">Email Address</p>
+          <p style="font-size: 16px; color: var(--text);">{{content.contact_info.email}}</p>
+        </div>
+
+        <div style="margin-bottom: 20px;">
+          <p style="font-size: 13px; text-transform: uppercase; color: var(--text-muted); font-weight: 700;">Dispatch Office</p>
+          <p style="font-size: 16px; color: var(--text);">{{content.contact_info.address}}</p>
+        </div>
+
+        <div>
+          <p style="font-size: 13px; text-transform: uppercase; color: var(--text-muted); font-weight: 700;">Operating Hours</p>
+          <p style="font-size: 16px; color: var(--text);">{{content.contact_info.business_hours}}</p>
+        </div>
+
+        {{#if content.emergency_note}}
+        <div style="margin-top: 24px; padding: 16px; background: #fee2e2; border-radius: 6px; color: #991b1b; font-size: 14px; font-weight: 600;">
+          ⚠️ {{content.emergency_note}}
+        </div>
+        {{/if}}
+      </div>
+
+      <!-- Quick Contact Form -->
+      <div class="card">
+        <h3 style="font-size: 22px; margin-bottom: 20px;">Send a Message</h3>
+        <form onsubmit="alert('Thank you! We will call you back immediately.'); return false;">
+          <div style="margin-bottom: 16px;">
+            <label style="display: block; font-size: 13px; font-weight: 600; margin-bottom: 6px;">Your Name</label>
+            <input type="text" required style="width: 100%; padding: 10px; border: 1px solid var(--border); border-radius: 6px; font-size: 14px;" placeholder="John Doe">
+          </div>
+          <div style="margin-bottom: 16px;">
+            <label style="display: block; font-size: 13px; font-weight: 600; margin-bottom: 6px;">Phone Number</label>
+            <input type="tel" required style="width: 100%; padding: 10px; border: 1px solid var(--border); border-radius: 6px; font-size: 14px;" placeholder="(555) 000-0000">
+          </div>
+          <div style="margin-bottom: 16px;">
+            <label style="display: block; font-size: 13px; font-weight: 600; margin-bottom: 6px;">Service Needed</label>
+            <input type="text" style="width: 100%; padding: 10px; border: 1px solid var(--border); border-radius: 6px; font-size: 14px;" placeholder="e.g. Leaking pipe, drain cleaning, water heater">
+          </div>
+          <div style="margin-bottom: 20px;">
+            <label style="display: block; font-size: 13px; font-weight: 600; margin-bottom: 6px;">Message / Details</label>
+            <textarea rows="4" style="width: 100%; padding: 10px; border: 1px solid var(--border); border-radius: 6px; font-size: 14px;" placeholder="Describe your issue..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width: 100%;">Submit Plumbing Request</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
